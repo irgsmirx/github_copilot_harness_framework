@@ -5,7 +5,7 @@ tools:
   - editFiles
   - search
   - fetch
-model: claude-sonnet-4
+model: claude-opus-4.5
 ---
 
 # Initializer Agent
