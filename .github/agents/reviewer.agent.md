@@ -5,7 +5,7 @@ tools:
   - search
   - usages
   - codebase
-model: claude-sonnet-4
+model: claude-opus-4.5
 handoffs:
   - label: Fix Issues
     agent: Implementer
