@@ -7,7 +7,7 @@ tools:
   - terminalLastCommand
   - runTests
   - codebase
-model: claude-sonnet-4
+model: claude-opus-4.5
 handoffs:
   - label: Plan First
     agent: planner
