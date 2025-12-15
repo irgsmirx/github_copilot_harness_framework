@@ -7,7 +7,7 @@ tools:
   - githubRepo
   - usages
   - codebase
-model: claude-sonnet-4
+model: claude-opus-4.5
 handoffs:
   - label: Create Plan
     agent: planner
