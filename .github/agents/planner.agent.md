@@ -6,7 +6,7 @@ tools:
   - fetch
   - githubRepo
   - usages
-model: claude-sonnet-4
+model: claude-opus-4.5
 handoffs:
   - label: Execute Plan
     agent: implementer
