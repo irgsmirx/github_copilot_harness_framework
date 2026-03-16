@@ -28,6 +28,7 @@ Key artifacts:
 ## Critical Principles
 
 1. **TDD is MANDATORY** - Write failing test FIRST, then implement, then refactor. Never implement without a failing test.
+2. **NEVER Hallucinate External Interfaces** - NEVER invent, assume, or guess API endpoints, auth flows, response structures, or file formats for external services. If real documentation (URL, Postman collection, OpenAPI spec) is not available, **STOP and ask the user**. Implementing against an invented specification is a framework violation.
 
 ### 🛑 TDD ENFORCEMENT GATES (Non-Negotiable)
 
