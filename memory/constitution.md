@@ -48,7 +48,37 @@ Enable developers to run **long-lived autonomous agents** within VS Code GitHub 
 - **ENFORCEMENT**: If test passes before implementation, the test is wrong
 - **VIOLATION**: Writing implementation before test is a framework violation
 
-### 2. Incremental Progress
+### 2. NEVER Hallucinate External Interfaces
+
+> ⚠️ **NON-NEGOTIABLE**: NEVER invent, assume, or guess the specification of an external API, file format, or protocol.
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│  🛑 EXTERNAL INTERFACE GATE                                      │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│  Before implementing ANY external integration:                  │
+│                                                                 │
+│  □ Obtain REAL documentation (URL, file, Postman collection)   │
+│  □ If no docs available: ASK THE USER                          │
+│  □ NEVER construct endpoints, auth flows, or response           │
+│    structures from "common patterns" or assumptions             │
+│  □ Document the source of truth in code comments                │
+│                                                                 │
+│  ⛔ Implementing against an invented API spec is a              │
+│     FRAMEWORK VIOLATION — same severity as skipping TDD         │
+│                                                                 │
+│  This applies to: REST APIs, SOAP services, file formats,      │
+│  database schemas, message queues, third-party SDKs             │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+- If you don't have docs → **STOP and ask the user**
+- If docs are incomplete → implement only what is documented, ask about the rest
+- Always cite the documentation source in code comments or commit messages
+
+### 3. Incremental Progress
 - One feature at a time
 - Complete before moving on
 - Commit after each success
